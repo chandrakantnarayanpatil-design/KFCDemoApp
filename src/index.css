@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-gradient-to-br from-sky-400 via-indigo-500 to-purple-600 min-h-screen font-sans;
+}
+
+.container-card {
+  @apply max-w-3xl mx-auto p-6;
+}
+
+.card {
+  @apply bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6;
+}
+
+.suggestions {
+  @apply bg-white rounded-md shadow-md mt-2 overflow-hidden;
+  transition: transform 200ms ease, opacity 200ms ease;
+  transform-origin: top;
+}
+.suggestion-enter {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+.suggestion-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.suggestion-item:hover {
+  @apply bg-indigo-50;
+}
+
+.task-completed {
+  @apply line-through text-gray-400;
+}
